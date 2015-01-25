@@ -1,16 +1,28 @@
+# OpenCV
+
+The following will build a cross-compiled version of OpenCV.  This is required to peform robot vision analysis on the RaspberryPi.
+
 ## Build
 
 ### Requirements
 
-* virtualbox
+* virtualbox 
 * vagrant
 
 ### Build
 
 ```
+# The base box only needs to be added once.
+$> vagrant box add ubuntu/trusty64
+
+# Provision virtual build environment
 $> vagrant up
+
+# Build OpenCV
 $> vagrant ssh -c /vagrant/build 
 ```
+
+The result of the build will be ```./build/opencv-4.2.10.tar.gz```
 
 ## Install
 
